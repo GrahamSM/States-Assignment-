@@ -36,8 +36,7 @@ taxes = {
 def describe_state(code, states)
 	code = code.to_sym
 	num_cities = states[code][:cities].length
-	all_cities = ""
-	states[code][:cities].each {|i| all_cities << (i+", ")}
+	all_cities = states[code][:cities].join(", ") 
 	description = "#{code} is for #{states[code][:name]}. It has #{num_cities} major cities " + all_cities
 end
 
