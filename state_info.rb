@@ -48,8 +48,8 @@ end
 
 def find_state_for_city(target_city, states)
 	states.each do |state, detail_hash|
-		detail_hash[:cities].each do |i|
-			if i.to_s == target_city
+		detail_hash[:cities].each do |cities|
+			if cities.to_s == target_city
 				return state, target_city
 			end
 		end
